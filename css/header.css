@@ -106,6 +106,17 @@ header {
   color: var(--secondary-text-color);
   transition: all 0.5s ease;
 }
+
+.mobileAnimation > ul {
+  animation: mobileAnimation 0.2s ease;
+}
+
+@keyframes mobileAnimation {
+  to {
+    display: none;
+  }
+}
+
 /* END Mobile Menu */
 
 /* Responsive Adjust */

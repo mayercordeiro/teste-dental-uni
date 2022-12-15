@@ -1,7 +1,9 @@
 function openNav() {
-  document.getElementById("mySidepanel").style.width = "350px";
+  const menuMobile = document.getElementById("mySidepanel");
+  menuMobile.style.width = "350px";
 }
 
 function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
+  const menuMobile = document.getElementById("mySidepanel");
+  menuMobile.style.width = "0";
 }

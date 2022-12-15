@@ -30,7 +30,7 @@
   width: 2px;
   height: 420px;
   position: absolute;
-  top: calc(50% - 198px);
+  top: calc(50% - 218px);
   left: 332px;
 }
 
@@ -43,7 +43,8 @@
 }
 
 .searchContainer > form > input {
-  padding: 8px;
+  padding: 4px 8px;
+  box-sizing: border-box;
 }
 
 .city {
@@ -62,7 +63,8 @@
 
 #city,
 #state {
-  padding: 2px 8px;
+  padding: 4px 8px;
+  box-sizing: border-box;
 }
 
 .uf {
@@ -206,7 +208,7 @@
   background: #ffffff;
   margin: 16px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -329,7 +331,8 @@
   }
 
   .infoItem {
-    height: auto;
+    width: 100px;
+    height: 48px;
     align-items: center;
   }
 
@@ -345,5 +348,17 @@
 
   .data h4 {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .infoItem {
+    width: 80px;
+    height: 48px;
+    align-items: center;
+  }
+
+  .infoItem a {
+    font-size: 0.8rem;
   }
 }
