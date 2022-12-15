@@ -1,0 +1,134 @@
+header {
+  width: 100%;
+  margin: 32px 0;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logoContainer > img {
+  max-width: 350px;
+}
+
+.headerContainer > nav ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.headerContainer > nav > ul > li {
+  position: relative;
+  cursor: pointer;
+}
+
+.headerContainer > nav > ul > li:hover {
+  color: var(--secondary-text-color);
+}
+
+.headerContainer > nav > ul > li::after {
+  content: "";
+  background: var(--secondary-text-color);
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.headerContainer > nav > ul > li:hover:after {
+  width: 100%;
+}
+
+/* Mobile Menu */
+.sidepanel {
+  height: auto;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: -10px;
+  background-color: var(--main-text-color);
+  overflow-x: hidden;
+  padding-top: 60px;
+  border-bottom-left-radius: 32px;
+  box-shadow: -4px 4px 8px 3px rgb(0 0 0 / 14%);
+  transition: 0.5s;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--grey-scale-one);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel ul li {
+  cursor: pointer;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--grey-scale-one);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--main-text-color);
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  position: absolute;
+  top: -2px;
+  right: 2px;
+}
+
+.openbtn:hover {
+  color: var(--secondary-text-color);
+  transition: all 0.5s ease;
+}
+/* END Mobile Menu */
+
+/* Responsive Adjust */
+@media screen and (max-width: 1239px) {
+  .headerContainer > nav {
+    display: none;
+  }
+  .openbtn {
+    display: unset;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .openbtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .logoContainer > img {
+    max-width: 250px;
+  }
+  .openbtn {
+    top: -6px;
+  }
+}
